@@ -1477,6 +1477,22 @@
                         });
                 });
             }
+
+
+            // --- Auto-close mobile navbar when clicking on links ---
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.getElementById('navbarNav');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Check if navbar is currently shown (mobile view)
+                    if (navbarCollapse.classList.contains('show')) {
+                        // Click the toggler button to close the menu
+                        navbarToggler.click();
+                    }
+                });
+            });
         });
     </script>
 </body>
