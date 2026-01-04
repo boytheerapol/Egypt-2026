@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>อียิปต์มนตรขลังแดนไอยคุปต์ 2026</title>
+    <title>อียิปต์มนต์ขลัง ดินแดนไอยคุปต์ 2026</title>
     <!-- Preconnect to required origins -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -20,7 +20,7 @@
         content="Egypt, Cairo, Giza, Alexandria, Travel, Itinerary, 2026, อียิปต์, ไคโร, มหาพีระมิด, แผนการเดินทาง">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="อียิปต์มนตรขลังแดนไอยคุปต์ 2026">
+    <meta property="og:title" content="อียิปต์มนต์ขลัง ดินแดนไอยคุปต์ 2026">
     <meta property="og:description" content="เที่ยวคุ้มไม่ย้อนเส้นทาง 6 วัน 3 คืน กับเส้นทางอารยธรรมโบราณและมหาพีระมิด">
     <meta property="og:image" content="icons/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -31,7 +31,7 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="อียิปต์มนตรขลังแดนไอยคุปต์ 2026">
+    <meta name="twitter:title" content="อียิปต์มนต์ขลัง ดินแดนไอยคุปต์ 2026">
     <meta name="twitter:description"
         content="เที่ยวคุ้มไม่ย้อนเส้นทาง 6 วัน 3 คืน กับเส้นทางอารยธรรมโบราณและมหาพีระมิด">
     <meta name="twitter:image" content="icons/og-image.png">
@@ -447,7 +447,7 @@
             <a class="navbar-brand" href="#">
                 <img src="images/cheerholidays_logo.jpg" alt="Cheer Holidays"
                     style="height: 35px; width: auto; margin-right: 10px; border-radius: 6px; vertical-align: middle;">
-                CHEER <span>Holidays</span>
+                <span style="color: #2f9acb;">Cheer Holidays</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -482,13 +482,14 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="container fade-in-section">
-            <h5 class="text-warning fw-bold mb-2"><i class="bi bi-star-fill"></i> 27 มี.ค. - 1 เม.ย. 2569</h5>
-            <h1>อียิปต์มนตรขลัง ดินแดนไอยคุปต์</h1>
+            <h5 class="text-warning fw-bold mb-2"><i class="bi bi-star-fill"></i> 27 มี.ค. - 1 เม.ย. 2569 <i
+                    class="bi bi-star-fill"></i></h5>
+            <h1>อียิปต์มนต์ขลัง <br class="d-sm-none">ดินแดนไอยคุปต์</h1>
             <p class="fs-5">Cairo • Giza • Memphis • Saqqara • Alexandria</p>
             <div class="hero-badges">
-                <span class="badge-gold">มหาพีระมิด</span>
-                <span class="badge-gold">ล่องแม่น้ำไนล์</span>
-                <span class="badge-gold">บินซาอุดิแอร์ไลน์</span>
+                <span class="badge-gold">มหาพีระมิดกีซา</span>
+                <span class="badge-gold">พิพิธภัณฑ์ใหม่ GEM</span>
+                <span class="badge-gold">ไข่มุกเมดิเตอร์เรเนียน</span>
             </div>
         </div>
     </div>
@@ -1482,14 +1483,28 @@
             // --- Auto-close mobile navbar when clicking on links ---
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.getElementById('navbarNav');
-            const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item');
 
-            navLinks.forEach(link => {
+            // Only select nav-links that are NOT dropdown toggles, plus all dropdown-items
+            const nonDropdownNavLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+            const dropdownItems = document.querySelectorAll('.navbar-nav .dropdown-item');
+
+            // Close navbar when clicking on non-dropdown nav-links (like "การเตรียมตัว")
+            nonDropdownNavLinks.forEach(link => {
                 link.addEventListener('click', function () {
-                    // Check if navbar is currently shown (mobile view)
                     if (navbarCollapse.classList.contains('show')) {
-                        // Click the toggler button to close the menu
                         navbarToggler.click();
+                    }
+                });
+            });
+
+            // Close navbar when clicking on dropdown items (submenu items like "วันที่ 1", "วันที่ 2", etc.)
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    if (navbarCollapse.classList.contains('show')) {
+                        // Small delay to allow smooth scroll to start before closing menu
+                        setTimeout(() => {
+                            navbarToggler.click();
+                        }, 100);
                     }
                 });
             });
