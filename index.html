@@ -12,12 +12,19 @@
     <!-- Preload critical CSS -->
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         onload="this.rel='stylesheet'">
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://mediaim.expedia.com">
+    <link rel="dns-prefetch" href="https://s359.kapook.com">
+    <link rel="dns-prefetch" href="https://cdn.mos.cms.futurecdn.net">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
         content="แผนการเดินทางท่องเที่ยวอียิปต์ 6 วัน 5 คืน 27 มี.ค. - 1 เม.ย. 2569 เที่ยวไคโร กีซา อเล็กซานเดรีย และเมมฟิส">
     <meta name="keywords"
         content="Egypt, Cairo, Giza, Alexandria, Travel, Itinerary, 2026, อียิปต์, ไคโร, มหาพีระมิด, แผนการเดินทาง">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://boytheerapol.github.io/Egypt-2026/">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="อียิปต์มนต์ขลัง ดินแดนไอยคุปต์ 2026">
@@ -58,8 +65,55 @@
     <!-- Google Fonts: Sarabun for Thai text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "อียิปต์มนต์ขลัง ดินแดนไอยคุปต์ 2026",
+      "description": "แผนการเดินทางท่องเที่ยวอียิปต์ 6 วัน 5 คืน เที่ยวไคโร กีซา อเล็กซานเดรีย และเมมฟิส",
+      "startDate": "2026-03-27",
+      "endDate": "2026-04-01",
+      "itinerary": [
+        {
+          "@type": "Place",
+          "name": "Cairo",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "EG"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Giza Pyramids",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "EG"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Alexandria",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "EG"
+          }
+        }
+      ],
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "Cheer Holidays",
+        "url": "https://boytheerapol.github.io/Egypt-2026/"
+      }
+    }
+    </script>
 
     <style>
         /* --- General Setup --- */
@@ -494,6 +548,24 @@
             color: #f4d03f;
         }
 
+        /* --- Skip Navigation Link (Accessibility) --- */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--gold);
+            color: var(--brown);
+            padding: 8px 16px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 100;
+            border-radius: 0 0 4px 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             .hero h1 {
@@ -513,8 +585,11 @@
 
 <body>
 
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="images/cheerholidays_logo.jpg" alt="Cheer Holidays"
@@ -551,859 +626,902 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="container animate-on-scroll zoom-in">
-            <h5 class="text-warning fw-bold mb-2"><i class="bi bi-star-fill"></i> 27 มี.ค. - 1 เม.ย. 2569 <i
-                    class="bi bi-star-fill"></i></h5>
-            <h1>อียิปต์มนต์ขลัง <br class="d-sm-none">ดินแดนไอยคุปต์</h1>
-            <p class="fs-5">Cairo • Giza • Memphis • Saqqara • Alexandria</p>
-            <div class="hero-badges">
-                <span class="badge-gold">มหาพีระมิดกีซา</span>
-                <span class="badge-gold">พิพิธภัณฑ์ใหม่ GEM</span>
-                <span class="badge-gold">ไข่มุกเมดิเตอร์เรเนียน</span>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container animate-on-scroll zoom-in">
+                <h5 class="text-warning fw-bold mb-2"><i class="bi bi-star-fill"></i> 27 มี.ค. - 1 เม.ย. 2569 <i
+                        class="bi bi-star-fill"></i></h5>
+                <h1>อียิปต์มนต์ขลัง <br class="d-sm-none">ดินแดนไอยคุปต์</h1>
+                <p class="fs-5">Cairo • Giza • Memphis • Saqqara • Alexandria</p>
+                <div class="hero-badges">
+                    <span class="badge-gold">มหาพีระมิดกีซา</span>
+                    <span class="badge-gold">พิพิธภัณฑ์ใหม่ GEM</span>
+                    <span class="badge-gold">ไข่มุกเมดิเตอร์เรเนียน</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="py-3"></div>
+        <div class="py-3"></div>
 
-    <div class="container pb-5">
-        <!-- Overview / Map Button -->
-        <section class="text-center mb-5 animate-on-scroll slide-up">
-            <h2 class="mb-4"><i class="bi bi-map me-2"></i>แผนที่เส้นทางการเดินทาง</h2>
-            <p class="text-muted mb-4">ดูภาพรวมเส้นทางจากไคโร สู่ อเล็กซานเดรีย และแหล่งประวัติศาสตร์ต่างๆ</p>
-            <a href="https://www.google.com/maps/dir/Old+Cairo,+Egypt/The+National+Museum+of+Egyptian+Civilization/Khan+el-Khalili/The+Great+Pyramid+of+Giza/Mosque+of+Muhammad+Ali/The+Hanging+Church/Sphinx+of+Memphis/Saqqara+Pyramid,+Badrshein,+Egypt/Alexandria,+Egypt/@29.9022361,31.1158585,11.37z/data=!4m56!4m55!1m5!1m1!1s0x145847056232e6f7:0xf042358353de4586!2m2!1d31.2340199!2d30.0077797!1m5!1m1!1s0x1458476863e39e8f:0xc2e058446f8f145d!2m2!1d31.2482393!2d30.0085929!1m5!1m1!1s0x145840eb2c0e580f:0x1761e0e461027d11!2m2!1d31.2622538!2d30.0477386!1m5!1m1!1s0x14584587ac8f291b:0x810c2f3fa2a52424!2m2!1d31.1342628!2d29.9791808!1m5!1m1!1s0x145840aa80f7569f:0xd0d4def35935c86e!2m2!1d31.2597966!2d30.0290456!1m5!1m1!1s0x145847104387574f:0x5ba0bd7ab3d09ac5!2m2!1d31.2301822!2d30.0052661!1m5!1m1!1s0x14584b2a1e338f41:0xec97aa32a7eda655!2m2!1d31.2549347!2d29.8495712!1m5!1m1!1s0x14584bd4cd4a2873:0xe08c36415baeee76!2m2!1d31.2168246!2d29.8684624!1m5!1m1!1s0x14f5c49126710fd3:0xb4e0cda629ee6bb9!2m2!1d29.9187387!2d31.2000924!3e9?hl=en&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank" rel="noopener noreferrer" class="map-btn">
-                <i class="bi bi-geo-alt-fill me-2"></i>เปิดเส้นทางใน Google Maps
-            </a>
-        </section>
+        <div class="container pb-5">
+            <!-- Overview / Map Button -->
+            <section class="text-center mb-5 animate-on-scroll slide-up">
+                <h2 class="mb-4"><i class="bi bi-map me-2"></i>แผนที่เส้นทางการเดินทาง</h2>
+                <p class="text-muted mb-4">ดูภาพรวมเส้นทางจากไคโร สู่ อเล็กซานเดรีย และแหล่งประวัติศาสตร์ต่างๆ</p>
+                <a href="https://www.google.com/maps/dir/Old+Cairo,+Egypt/The+National+Museum+of+Egyptian+Civilization/Khan+el-Khalili/The+Great+Pyramid+of+Giza/Mosque+of+Muhammad+Ali/The+Hanging+Church/Sphinx+of+Memphis/Saqqara+Pyramid,+Badrshein,+Egypt/Alexandria,+Egypt/@29.9022361,31.1158585,11.37z/data=!4m56!4m55!1m5!1m1!1s0x145847056232e6f7:0xf042358353de4586!2m2!1d31.2340199!2d30.0077797!1m5!1m1!1s0x1458476863e39e8f:0xc2e058446f8f145d!2m2!1d31.2482393!2d30.0085929!1m5!1m1!1s0x145840eb2c0e580f:0x1761e0e461027d11!2m2!1d31.2622538!2d30.0477386!1m5!1m1!1s0x14584587ac8f291b:0x810c2f3fa2a52424!2m2!1d31.1342628!2d29.9791808!1m5!1m1!1s0x145840aa80f7569f:0xd0d4def35935c86e!2m2!1d31.2597966!2d30.0290456!1m5!1m1!1s0x145847104387574f:0x5ba0bd7ab3d09ac5!2m2!1d31.2301822!2d30.0052661!1m5!1m1!1s0x14584b2a1e338f41:0xec97aa32a7eda655!2m2!1d31.2549347!2d29.8495712!1m5!1m1!1s0x14584bd4cd4a2873:0xe08c36415baeee76!2m2!1d31.2168246!2d29.8684624!1m5!1m1!1s0x14f5c49126710fd3:0xb4e0cda629ee6bb9!2m2!1d29.9187387!2d31.2000924!3e9?hl=en&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" rel="noopener noreferrer" class="map-btn">
+                    <i class="bi bi-geo-alt-fill me-2"></i>เปิดเส้นทางใน Google Maps
+                </a>
+            </section>
 
-        <!-- Day 1: Arrival & Old Cairo -->
-        <div id="day-1" class="day-section animate-on-scroll slide-up">
-            <h2><span class="day-badge">วันที่ 1</span> 27 มี.ค. | สนามบินสุวรรณภูมิ</h2>
+            <!-- Day 1: Arrival & Old Cairo -->
+            <div id="day-1" class="day-section animate-on-scroll slide-up">
+                <h2><span class="day-badge">วันที่ 1</span> 27 มี.ค. | สนามบินสุวรรณภูมิ</h2>
 
-            <div class="card-body">
-                <div class="card-header-custom rounded-top">
-                    <h5 class="card-title"><i class="bi bi-airplane-engines-fill me-2"></i>เริ่มต้นการเดินทาง</h5>
-                    <span class="card-subtitle">Suvarnabhumi International Airport</span>
+                <div class="card-body">
+                    <div class="card-header-custom rounded-top">
+                        <h5 class="card-title"><i class="bi bi-airplane-engines-fill me-2"></i>เริ่มต้นการเดินทาง</h5>
+                        <span class="card-subtitle">Suvarnabhumi International Airport</span>
+                    </div>
+                    <div class="highlight-box">
+                        <h6><i class="bi bi-stars me-1"></i>จุดนัดพบ</h6>
+                        <p class="small mb-0">นัดหมายพบกันที่สนามบินสุวรรณภูมิ <strong>เคาน์เตอร์สายการบิน Saudi Arabian
+                                Airlines
+                                เวลา 22.30 น.</strong> เพื่อเตรียมตัวออกเดินทางสู่แดนมหาพีระมิด ด้วย<strong>เที่ยวบิน
+                                SV849</strong>
+                            ในเช้ามืดของวันที่ 28 มี.ค.
+                        </p>
+                    </div>
                 </div>
+
+                <div class="row">
+                    <!-- Airport Departure Images -->
+                    <div class="col-12 mb-4">
+                        <div class="card h-100">
+                            <div id="carouselAirport" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselAirport" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselAirport"
+                                        data-bs-slide-to="1"></button>
+
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/airplane.jpg" class="d-block w-100" alt="Airplane Taking Off">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=2070&auto=format&fit=crop"
+                                            class="d-block w-100" alt="Airport Departure Terminal">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAirport"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselAirport"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text small">เตรียมพร้อมสำหรับการผจญภัยสู่ดินแดนแห่งฟาโรห์และอารยธรรมโบราณ
+                                    พร้อมสัมภาระและความตื่นเต้นสำหรับทริปสุดพิเศษ 6 วัน 3 คืน</p>
+                                <div class="food-souvenir">
+                                    <span class="tag"><i class="bi bi-clock me-1"></i>22:30 น.</span>
+                                    <span class="tag"><i class="bi bi-airplane-fill me-1"></i>SV849</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                </div>
+            </div>
+
+            <!-- Day 2: Giza & Nile Cruise -->
+            <div id="day-2" class="day-section animate-on-scroll slide-up">
+                <h2><span class="day-badge">วันที่ 2</span> 28 มี.ค. | ถึงไคโร & เมืองเก่า (Old Cairo)</h2>
+                <p class="text-muted mb-4">เดินทางถึงไคโร เยี่ยมชมพิพิธภัณฑ์แห่งชาติอารยธรรมอียิปต์ (NMEC)
+                    และช้อปปิ้งตลาดคานเอลคาลลี</p>
+
+                <div class="row">
+                    <!-- Location: NMEC -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-right stagger-item">
+                            <div id="carouselNMEC" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselNMEC" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselNMEC" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselNMEC" data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://mediaim.expedia.com/localexpert/5074832/d3c8c466-1696-4ab3-92fe-677d5a8c864f.jpg?impolicy=resizecrop&rw=1005&rh=565?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="NMEC-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://s359.kapook.com/pagebuilder/fd1649a8-99e3-48e6-8a0d-bc6cab58ba75.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="NMEC-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://s359.kapook.com/pagebuilder/5ab67576-dc1d-4126-97de-fdbc26b22d16.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="NMEC-3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselNMEC"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselNMEC"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i
+                                            class="bi bi-building me-2"></i>พิพิธภัณฑ์แห่งชาติอารยธรรมอียิปต์ (NMEC)
+                                    </h5>
+                                    <span class="card-subtitle">Fustat, Old Cairo</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">ที่เก็บรวบรวมมหาฟาโรห์และราชินีแห่งอียิปต์โบราณแห่งใหม่ล่าสุด
+                                        ไฮไลท์คือ <strong>ห้องโถงมัมมี่หลวง (The Royal Mummies Hall)</strong>
+                                        ที่จัดแสดงมัมมี่ของฟาโรห์ 22 พระองค์ อาทิ ฟาโรห์รามเสสที่ 2, ฟาโรห์เซติที่ 1
+                                        และราชินีฮัตเชปซุต</p>
+                                </div>
+                                <p class="card-text small">พิพิธภัณฑ์แห่งนี้เล่าเรื่องราวอารยธรรมอียิปต์อย่างครบวงจร
+                                    ตั้งแต่ยุคก่อนประวัติศาสตร์จนถึงยุคปัจจุบัน ด้วยเทคโนโลยีการจัดแสดงระดับโลก</p>
+                                <div class="food-souvenir">
+                                    <span class="tag"><i class="bi bi-camera me-1"></i>Photo Spot</span>
+                                    <span class="tag"><i class="bi bi-book me-1"></i>ประวัติศาสตร์</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location: Khan el-Khalili -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-left stagger-item">
+                            <div id="carouselKhan" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselKhan" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselKhan" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselKhan" data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://st.depositphotos.com/2110927/55084/i/600/depositphotos_550848374-stock-photo-khan-khalili-market-old-cairo.jpg"
+                                            class="d-block w-100" alt="Khan el-Khalili Market-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/43/37/da/3707-10151228227672760.jpg?w=900&h=-1&s=1"
+                                            class="d-block w-100" alt="Khan el-Khalili Market-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/6a/a3/5b/sovernirs.jpg?w=1400&h=-1&s=1"
+                                            class="d-block w-100" alt="Khan el-Khalili Market-3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselKhan"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselKhan"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-bag me-2"></i>ตลาดคานเอลคาลลี (Khan
+                                        el-Khalili)
+                                    </h5>
+                                    <span class="card-subtitle">Islamic Cairo</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">ตลาดเก่าแก่ที่มีชื่อเสียงที่สุดในกรุงไคโร
+                                        และเป็นตลาดแบบอาหรับที่คึกคักและมีเสน่ห์ที่สุดในตะวันออกกลาง
+                                        บรรยากาศสไตล์อียิปต์โบราณผสมผสานชีวิตคนท้องถิ่น</p>
+                                </div>
+                                <p class="card-text small">แหล่งช้อปปิ้งของฝากสไตล์อียิปต์ เช่น งานหัตถกรรม เครื่องเงิน
+                                    น้ำหอม ผ้าทอ และของที่ระลึก สามารถนั่งจิบชาหรือกาแฟที่ร้านน้ำชาเก่าแก่ได้</p>
+                                <div class="food-souvenir">
+                                    <span class="tag"><i class="bi bi-cup-hot me-1"></i>ชิชา</span>
+                                    <span class="tag"><i class="bi bi-gift me-1"></i>ของฝาก</span>
+                                    <span class="tag"><i class="bi bi-lightbulb me-1"></i>โคมไฟ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Information -->
+                <div class="alert mt-4" role="alert"
+                    style="background: linear-gradient(135deg, #f3e6c9 0%, #ede0c8 100%); border-left: 4px solid #d4af37; border-radius: 8px; box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);">
+                    <h6 style="color: #5a3e2b; margin-bottom: 8px;"><i class="bi bi-building me-2"
+                            style="color: #d4af37;"></i>โรงแรมที่พัก</h6>
+                    <p class="mb-0" style="color: #5a3e2b;"><strong>Radisson Blu Hotel, Cairo</strong></p>
+                </div>
+            </div>
+
+            <!-- Day 3: Giza & Nile Cruise -->
+            <div id="day-3" class="day-section animate-on-scroll slide-up">
+                <h2><span class="day-badge">วันที่ 3</span> 29 มี.ค. | มหาพีระมิด & Grand Egyptian Museum</h2>
+                <p class="text-muted mb-4">เยี่ยมชมสิ่งมหัศจรรย์ของโลก มหาพีระมิดกีซา และสฟิงซ์ พร้อมชม Grand Egyptian
+                    Museum และดินเนอร์ล่องเรือแม่น้ำไนล์ยามค่ำคืน</p>
+
+                <div class="row">
+                    <!-- Location: Pyramids & Sphinx -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-right stagger-item">
+                            <div id="carouselPyramids" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselPyramids" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselPyramids"
+                                        data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselPyramids"
+                                        data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm-970-80.jpg.webp?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="pyramid-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.worldatlas.com/r/w960-q80/upload/82/6b/a4/thinkstockphotos-178379842.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="pyramid-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/pyramid-1.jpg" class="d-block w-100" alt="pyramid-3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPyramids"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselPyramids"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-triangle-fill me-2"></i>มหาพีระมิดและสฟิงซ์
+                                    </h5>
+                                    <span class="card-subtitle">Giza Plateau</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">หนึ่งในเจ็ดสิ่งมหัศจรรย์ของโลกยุคโบราณ สร้างขึ้นเมื่อกว่า
+                                        4,500 ปี
+                                        โดยฟาโรห์คูฟู ประกอบด้วยหินกว่า 2.3 ล้านก้อน และรูปสลักสิงโตหัวมนุษย์
+                                        ผู้พิทักษ์นครศักดิ์สิทธิ์</p>
+                                </div>
+                                <p class="card-text small">สัมผัสความยิ่งใหญ่ของอาณาจักรอียิปต์โบราณ
+                                    สถานที่ที่ท้าทายจินตนาการของมนุษยชาติมาหลายยุคหลายสมัย</p>
+                                <div class="food-souvenir">
+                                    <span class="tag"><i class="bi bi-camera me-1"></i>Photo Spot</span>
+                                    <span class="tag"><i class="bi bi-book me-1"></i>ประวัติศาสตร์</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Location: Grand Egyptian Museum (GEM) -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-up stagger-item">
+                            <div id="carouselGEM" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselGEM" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselGEM" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselGEM" data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://www.pelago.com/img/products/EG-Egypt/3-hour-tour-to-the-grand-egyptian-museum-gem/ccc0deb5-d097-457d-8e17-c204297d20a3_3-hour-tour-to-the-grand-egyptian-museum-gem-large.webp?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="GEM-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://egyptra.pro/uploads/photo_library/photo_6824b3495d851.webp?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="GEM-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://static.wixstatic.com/media/5eff48_03b3e7b54fc84360b67a38cbfa4bc333~mv2.jpg/v1/fill/w_900,h_675,al_c,q_85,enc_avif,quality_auto/5eff48_03b3e7b54fc84360b67a38cbfa4bc333~mv2.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="GEM-3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGEM"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselGEM"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-bank2 me-2"></i>Grand Egyptian Museum (GEM)
+                                    </h5>
+                                    <span class="card-subtitle">Near Giza Plateau</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">พิพิธภัณฑ์ที่ทันสมัยและยิ่งใหญ่ที่สุดในโลก
+                                        พร้อม<strong>ห้องสมบัติฟาโรห์ตุตันคาเมน</strong> ที่จัดแสดงครบครั้งแรก
+                                        ชมสมบัติทองคำ
+                                        โลงพระศพ
+                                        และเครื่องใช้ล้ำค่านับพันชิ้น</p>
+                                </div>
+                                <p class="card-text small">แลนด์มาร์กแห่งศตวรรษที่ 21
+                                    ที่เชื่อมมรดกโบราณเข้ากับเทคโนโลยีสมัยใหม่ ตั้งอยู่ไม่ไกลจากมหาพีระมิด</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location: Nile Cruise -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-left stagger-item">
+                            <div id="carouselNile" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselNile" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselNile" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselNile" data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://ak-d.tripcdn.com/images//0581112000n3oot2m097D_C_1080_607.jpg_.webp?_fr=wc"
+                                            class="d-block w-100" alt="Nile Cruise-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/nilecrystal1-2.png" class="d-block w-100" alt="Nile Cruise-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/nilecrystal1-3.jpg" class="d-block w-100" alt="Nile Cruise-3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselNile"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselNile"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-water me-2"></i>ล่องแม่น้ำไนล์
+                                        รับประทานอาหารค่ำ
+                                    </h5>
+                                    <span class="card-subtitle">River Nile</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">ประสบการณ์สุดพิเศษบนสายน้ำอมตะ พร้อมชมการแสดงระบำหน้าท้อง
+                                        (Belly
+                                        Dance) และรำพื้นเมือง (Tanoura)</p>
+                                </div>
+                                <p class="card-text small">อิ่มอร่อยกับบุฟเฟต์อาหารนานาชาติและอาหารพื้นเมือง
+                                    ชมวิวแสงไฟริมฝั่งแม่น้ำไนล์ยามค่ำคืน</p>
+                                <div class="food-souvenir">
+                                    <span class="tag"><i class="bi bi-music-note-beamed me-1"></i>Show</span>
+                                    <span class="tag"><i class="bi bi-cup-straw me-1"></i>Dinner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Information -->
+                <div class="alert mt-4" role="alert"
+                    style="background: linear-gradient(135deg, #f3e6c9 0%, #ede0c8 100%); border-left: 4px solid #d4af37; border-radius: 8px; box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);">
+                    <h6 style="color: #5a3e2b; margin-bottom: 8px;"><i class="bi bi-building me-2"
+                            style="color: #d4af37;"></i>โรงแรมที่พัก</h6>
+                    <p class="mb-0" style="color: #5a3e2b;"><strong>Radisson Blu Hotel, Cairo</strong></p>
+                </div>
+            </div>
+
+
+            <!-- Day 4: Citadel, Memphis & Saqqara (Content from old Day 3) -->
+            <div id="day-4" class="day-section animate-on-scroll slide-up">
+                <h2><span class="day-badge">วันที่ 4</span> 30 มี.ค. | ป้อมปราการไคโร, เมมฟิส & ซัคคารา</h2>
+                <p class="text-muted mb-4">สำรวจมัสยิดโมฮัมหมัดอาลี โบสถ์แขวน ย่านคอปติกไคโร
+                    และเดินทางสู่เมืองหลวงเก่าเมมฟิส กับพีระมิดขั้นบันไดแห่งแรกของโลก</p>
+
+                <div class="row">
+                    <!-- Location: Mosque of Muhammad Ali -->
+                    <div class="col-12 col-md-6 col-lg-6 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-right stagger-item">
+                            <div id="carouselMosque" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselMosque" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselMosque"
+                                        data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselMosque"
+                                        data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://egymonuments.gov.eg/media/1126/dsc_0143-2.jpg?anchor=center&mode=crop&width=645&height=423&rnd=133300936160000000"
+                                            class="d-block w-100" alt="Mosque of Muhammad Ali-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://mlrhpz8jmuut.i.optimole.com/cb:w8qn.502d1/w:710/h:473/q:mauto/dpr:1.5/f:best/ig:avif/id:bd96cb77814f1fa343880a78f7a67497/https://www.egypttoursplus.com/Mosque-Of-Mohamed-Ali-%E2%80%93-The-Alabaster-Mosque.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="Mosque of Muhammad Ali-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://ucarecdn.com/4a823330-33e6-4fe8-9104-c578da9695dd/-/crop/640x360/20,0/-/preview/?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="Mosque of Muhammad Ali-3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMosque"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselMosque"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-moon-stars-fill me-2"></i>มัสยิดโมฮัมหมัดอาลี
+                                    </h5>
+                                    <span class="card-subtitle">The Citadel, Cairo</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">ตั้งอยู่ภายในป้อมปราการไคโร
+                                        มีลักษณะเด่นคือผนังทั้งภายในและภายนอกกรุดด้วยหินอลาบาสเตอร์ขาวนวล จึงได้ชื่อว่า
+                                        <strong>"มัสยิดอลาบาสเตอร์"</strong>
+                                    </p>
+                                </div>
+                                <p class="card-text small">สถาปัตยกรรมแบบออตโตมัน พร้อมโดมใหญ่และหออะซานคู่ ที่สวยงาม
+                                    จากบริเวณลานด้านนอก สามารถชมทิวทัศน์อันงดงาม ของกรุงไคโรแบบพาโนรามาได้</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location: Hanging Church & Coptic Museum -->
+                    <div class="col-12 col-md-6 col-lg-6 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-left stagger-item">
+                            <div id="carouselCoptic" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselCoptic" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselCoptic"
+                                        data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselCoptic"
+                                        data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://www.egypttoursportal.com/images/2025/05/Hanging-Church-In-Coptic-Cairo-Egypt-Tours-Portal.jpg"
+                                            class="d-block w-100" alt="Hanging Church-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://ucarecdn.com/38b8dcbf-7a48-4c69-93fc-97bd15346097/-/crop/640x360/20,0/-/preview/?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="Hanging Church-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://mediaim.expedia.com/destination/9/e30f118e0af905961ebfeee2d6d6840d.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="Coptic Museum-1">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCoptic"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCoptic"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-bookmark-star-fill me-2"></i>โบสถ์แขวน &
+                                        พิพิธภัณฑ์คอปติก
+                                    </h5>
+                                    <span class="card-subtitle">Coptic Cairo</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">โบสถ์แขวนตั้งอยู่เหนือประตูป้อมบาบิโลนโบราณ จนดูเหมือน 'แขวน'
+                                        กลางอากาศ
+                                        ภายในตกแต่งด้วยศิลปะคอปติกชั้นสูง และรวบรวมภาพไอคอนเก่าแก่ล้ำค่ากว่า 110 ภาพ</p>
+                                </div>
+                                <p class="card-text small">ศูนย์รวมจิตใจและเป็นมรดกแห่งศรัทธาของชาวคริสต์คอปติก
+                                    ที่ยังคงสืบทอดมาจนถึงปัจจุบัน</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location: Saint Sergius and Bacchus Church -->
+                    <div class="col-12 col-md-6 col-lg-12 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-up stagger-item">
+                            <div id="carouselSaintSergius" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselSaintSergius" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselSaintSergius"
+                                        data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselSaintSergius"
+                                        data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/Church_of_Sts._Sergius_and_Bacchus_1.jpg" class="d-block w-100"
+                                            alt="Saint Sergius Church-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://egyptplanners.com/wp-content/uploads/2020/07/church-of-abu-serga.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="Saint Sergius Church-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://i0.wp.com/egypttimetravel.com/wp-content/uploads/2020/07/Church-of-St-Sergius.jpg?w=800&ssl=1?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="Saint Sergius Church-3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselSaintSergius" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselSaintSergius" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i
+                                            class="bi bi-star-fill me-2"></i>โบสถ์เซนต์เซอร์จิอุสและเซนต์บาคคัส
+                                    </h5>
+                                    <span class="card-subtitle">Coptic Cairo</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">โบสถ์คริสต์เก่าแก่ที่สุดแห่งหนึ่งของอียิปต์ (ศตวรรษที่ 4-5)
+                                        มี<strong>ถ้ำศักดิ์สิทธิ์ (Crypt)</strong>
+                                        ใต้พื้นโบสถ์ที่เชื่อว่าเคยเป็นที่พำนักของ
+                                        <strong>ครอบครัวศักดิ์สิทธิ์</strong> (พระนางมารีย์ นักบุญโยเซฟ และพระเยซูทารก)
+                                        ระหว่างการลี้ภัยในอียิปต์
+                                    </p>
+                                </div>
+                                <p class="card-text small">สถาปัตยกรรมแบบบาซิลิกา ตกแต่งด้วยฉากไม้แกะสลัก ไอคอน
+                                    และแท่นบูชาหินอ่อน สะท้อนศิลปะคอปติกอันเป็นเอกลักษณ์
+                                    เปิดให้ลงไปสัมผัสความศักดิ์สิทธิ์ในถ้าใต้ดินได้</p>
+                                <div class="food-souvenir">
+                                    <span class="tag"><i class="bi bi-heart-fill me-1"></i>ศักดิ์สิทธิ์</span>
+                                    <span class="tag"><i class="bi bi-book me-1"></i>ประวัติศาสตร์</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location: Memphis & Saqqara -->
+                    <div class="col-12 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-right stagger-item">
+                            <div id="carouselMemphis" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselMemphis" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselMemphis"
+                                        data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselMemphis"
+                                        data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/memphis_1.jpg" class="d-block w-100" alt="Ancient Memphis">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/14/61/8c/memphis-museum.jpg?w=2000&h=-1&s=1"
+                                            class="d-block w-100" alt="Step Pyramid">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/memphis_3.jpg" class="d-block w-100" alt="Saqqara Ruins">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMemphis"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselMemphis"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-columns-gap me-2"></i>เมืองเมมฟิส & ซัคคารา
+                                    </h5>
+                                    <span class="card-subtitle">Historic Capital</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="highlight-box mb-2">
+                                            <h6><i class="bi bi-stars me-1"></i>เมมฟิส (Memphis)</h6>
+                                            <p class="small mb-0">เมืองหลวงแรกของอียิปต์โบราณ
+                                                ไฮไลท์คือ <strong>รูปสลักฟาโรห์รามเสสที่ 2</strong>
+                                                ขนาดมหึมาที่นอนบรรทมอย่างสง่า
+                                                และสฟิงซ์อลาบาสเตอร์ขนาดใหญ่อันดับสองของอียิปต์</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="highlight-box mb-2">
+                                            <h6><i class="bi bi-stars me-1"></i>ซัคคารา (Saqqara)</h6>
+                                            <p class="small mb-0">ไฮไลท์คือ <strong>พีระมิดขั้นบันไดแห่งแรกของโลก (Step
+                                                    Pyramid)</strong>
+                                                สร้างโดยฟาโรห์โจเซอร์ เป็นจุดเริ่มต้นของสถาปัตยกรรมพีระมิด</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="card-text small">
+                                    การมาเยี่ยมชมสองแห่งนี้คือการเดินทางย้อนเวลากลับไปสู่จุดกำเนิดของอารยธรรมอียิปต์</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Information -->
+                <div class="alert mt-4" role="alert"
+                    style="background: linear-gradient(135deg, #f3e6c9 0%, #ede0c8 100%); border-left: 4px solid #d4af37; border-radius: 8px; box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);">
+                    <h6 style="color: #5a3e2b; margin-bottom: 8px;"><i class="bi bi-building me-2"
+                            style="color: #d4af37;"></i>โรงแรมที่พัก</h6>
+                    <p class="mb-0" style="color: #5a3e2b;"><strong>Radisson Blu Hotel, Cairo</strong></p>
+                </div>
+            </div>
+
+            <!-- Day 5: Alexandria -->
+            <div id="day-5" class="day-section animate-on-scroll slide-up">
+                <h2><span class="day-badge">วันที่ 5</span> 31 มี.ค. | เมืองอเล็กซานเดรียแห่งทะเลเมดิเตอร์เรเนียน</h2>
+                <p class="text-muted mb-4">เดินทางสู่เมืองท่าเก่าแก่ ชมหอสมุดอเล็กซานเดรีย ป้อมปราการไคต์เบย์
+                    และสุสานใต้ดินโคมเอลโชคาฟา</p>
+
+                <div class="row">
+                    <!-- Location: Citadel of Qaitbay -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-right stagger-item">
+                            <div id="carouselCitadel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselCitadel" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselCitadel"
+                                        data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselCitadel"
+                                        data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://www.youregypttours.com/storage/1082/1678607223.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="ป้อมปราการไคต์เบย์-1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://res.cloudinary.com/ddjuftfy2/image/upload/f_webp,c_fill,q_auto,w_1300/memphis/xlarge/273993311_many-boats-in-front-of-Qaitbay-citadel.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="ป้อมปราการไคต์เบย์-2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://mushroomtravelpage.b-cdn.net/wp-content/uploads/2022/05/Bibliotheca-Alexandrina-shutterstock_355504571.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="หอสมุดอเล็กซานเดรีย">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCitadel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCitadel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-shield-lock me-2"></i>ป้อมปราการไคต์เบย์ &
+                                        หอสมุด
+                                    </h5>
+                                    <span class="card-subtitle">Alexandria Coast</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">ป้อมปราการสมัยศตวรรษที่ 15
+                                        สร้างบนฐานของ <strong>ประภาคารฟาโรสแห่งอเล็กซานเดรีย</strong>
+                                        ใกล้กับหอสมุดอเล็กซานเดรียสมัยใหม่ที่สวยงามรูปทรงวงกลม</p>
+                                </div>
+                                <p class="card-text small">ชมวิวทิวทัศน์ทะเลเมดิเตอร์เรเนียนจากมุมสูงของป้อมปราการ
+                                    และแวะถ่ายรูปกับหอสมุดที่เป็นสัญลักษณ์ของการฟื้นฟูความรู้</p>
+                                <div class="food-souvenir">
+                                    <span class="tag"><i class="bi bi-fish me-1"></i>อาหารทะเล</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location: Catacombs & Pompey's Pillar -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 animate-on-scroll slide-left stagger-item">
+                            <div id="carouselCatacombs" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselCatacombs" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#carouselCatacombs"
+                                        data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#carouselCatacombs"
+                                        data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/catacombs_1.jpg" class="d-block w-100" alt="Ancient Catacombs">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/catacombs_2.jpg" class="d-block w-100" alt="Roman Ruins">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.historyhit.com/app/uploads/2020/11/shutterstock_pompeys-pillar-1.jpg?w=800&auto=format&fit=crop"
+                                            class="d-block w-100" alt="Alexandria Artifacts">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCatacombs"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCatacombs"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-header-custom rounded-top">
+                                    <h5 class="card-title"><i class="bi bi-box-seam me-2"></i>สุสานใต้ดิน & เสาปอมเปย์
+                                    </h5>
+                                    <span class="card-subtitle">Kom El Shoqafa</span>
+                                </div>
+                                <div class="highlight-box">
+                                    <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
+                                    <p class="small mb-0">สุสานใต้ดินขนาดใหญ่ 3 ชั้น ผสมผสานศิลปะอียิปต์ โรมัน
+                                        และกรีก,
+                                        เสาปอมเปย์คือเสาหินแกรนิตแดงขนาดยักษ์สูง 27 เมตร</p>
+                                </div>
+                                <p class="card-text small">
+                                    ลงไปสำรวจโลกใต้พิภพที่เต็มไปด้วยงานแกะสลักศิลปะประกอบศาสนาและความเชื่อโบราณ</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 6: Return to Bangkok -->
+            <div id="day-6" class="day-section animate-on-scroll slide-up">
+                <h2><span class="day-badge">วันที่ 6</span> 1 เม.ย. | เดินทางกลับกรุงเทพฯ</h2>
+                <p class="text-muted mb-4">เดินทางจากสนามบินเจดดาห์กลับสู่กรุงเทพฯ</p>
+
                 <div class="highlight-box">
-                    <h6><i class="bi bi-stars me-1"></i>จุดนัดพบ</h6>
-                    <p class="small mb-0">นัดหมายพบกันที่สนามบินสุวรรณภูมิ <strong>เคาน์เตอร์สายการบิน Saudi Arabian
-                            Airlines
-                            เวลา 22.30 น.</strong> เพื่อเตรียมตัวออกเดินทางสู่แดนมหาพีระมิด ด้วย<strong>เที่ยวบิน
-                            SV849</strong>
-                        ในเช้ามืดของวันที่ 28 มี.ค.
+                    <h6><i class="bi bi-airplane-fill me-1"></i>ข้อมูลเที่ยวบิน</h6>
+                    <p class="small mb-2"><strong>ออกเดินทาง:</strong> สนามบินเจดดาห์ เวลา 01:30 น. ด้วยเที่ยวบิน
+                        <strong>SV844</strong>
                     </p>
+                    <p class="small mb-0"><strong>เดินทางถึง:</strong> สนามบินสุวรรณภูมิ เวลา 13:45 น.</p>
+                </div>
+
+                <div class="text-center mt-4">
+                    <p class="lead" style="color: var(--brown);">🎉 สิ้นสุดการเดินทางที่น่าประทับใจ 🎉</p>
+                    <p class="text-muted">ขอบคุณที่ร่วมเดินทางกับ Cheer Holidays</p>
                 </div>
             </div>
 
-            <div class="row">
-                <!-- Airport Departure Images -->
-                <div class="col-12 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselAirport" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselAirport" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselAirport" data-bs-slide-to="1"></button>
-
+            <!-- Preparation Checklist -->
+            <section id="preparation" class="day-section animate-on-scroll slide-up">
+                <h2><i class="bi bi-clipboard-check me-2"></i>การเตรียมตัวก่อนเดินทาง</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="mb-3" style="color: var(--brown);"><i
+                                class="bi bi-file-earmark-text me-2"></i>เอกสารและวีซ่า
+                        </h5>
+                        <div class="checklist-item">
+                            <i class="bi bi-check-circle-fill checklist-icon"></i>
+                            <div>
+                                <strong>วีซ่าอียิปต์ (E-visa)</strong>
+                                <p class="small text-muted mb-0">ใช้เวลาประมาณ 25-30 วันในการพิจารณา
+                                    ต้องมีหนังสือเดินทางอายุเหลือมากกว่า 6 เดือน</p>
                             </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/airplane.jpg" class="d-block w-100" alt="Airplane Taking Off">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=2070&auto=format&fit=crop"
-                                        class="d-block w-100" alt="Airport Departure Terminal">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAirport"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAirport"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
                         </div>
-                        <div class="card-body">
-                            <p class="card-text small">เตรียมพร้อมสำหรับการผจญภัยสู่ดินแดนแห่งฟาโรห์และอารยธรรมโบราณ
-                                พร้อมสัมภาระและความตื่นเต้นสำหรับทริปสุดพิเศษ 6 วัน 3 คืน</p>
-                            <div class="food-souvenir">
-                                <span class="tag"><i class="bi bi-clock me-1"></i>22:30 น.</span>
-                                <span class="tag"><i class="bi bi-airplane-fill me-1"></i>SV849</span>
+                        <div class="checklist-item">
+                            <i class="bi bi-check-circle-fill checklist-icon"></i>
+                            <div>
+                                <strong>หนังสือเดินทาง (Passport)</strong>
+                                <p class="small text-muted mb-0">สำเนาหน้าแรกและหน้าที่มีวีซ่า</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="mb-3" style="color: var(--brown);"><i
+                                class="bi bi-cash-coin me-2"></i>สิ่งที่ควรเตรียมและรู้จัก</h5>
+                        <div class="checklist-item">
+                            <i class="bi bi-info-circle-fill checklist-icon"></i>
+                            <div>
+                                <strong>การแต่งกาย</strong>
+                                <p class="small text-muted mb-0">เนื่องจากเข้าชมโบสถ์และมัสยิด
+                                    ผู้หญิงควรมีผ้าคลุมไหล่/ผ้าโพกศีรษะ ผู้ชายควมสวมกางเกงขายาว</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="bi bi-info-circle-fill checklist-icon"></i>
+                            <div>
+                                <strong>ทิป (Tip)</strong>
+                                <p class="small text-muted mb-0">ค่าทิปพนักงานขับรถ, ไกด์ และพนักงานบริการโดยเฉลี่ย
+                                    2,500
+                                    บาท/ทริป/ท่าน</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="bi bi-sun-fill checklist-icon"></i>
+                            <div>
+                                <strong>สภาพอากาศ</strong>
+                                <p class="small text-muted mb-0">เดือนมีนาคมอากาศค่อนข้างร้อน ควรเตรียมครีมกันแดด
+                                    แว่นกันแดด
+                                    และเสื้อผ้ายืดหยุ่น</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="row">
-
-            </div>
         </div>
 
-        <!-- Day 2: Giza & Nile Cruise -->
-        <div id="day-2" class="day-section animate-on-scroll slide-up">
-            <h2><span class="day-badge">วันที่ 2</span> 28 มี.ค. | ถึงไคโร & เมืองเก่า (Old Cairo)</h2>
-            <p class="text-muted mb-4">เดินทางถึงไคโร เยี่ยมชมพิพิธภัณฑ์แห่งชาติอารยธรรมอียิปต์ (NMEC)
-                และช้อปปิ้งตลาดคานเอลคาลลี</p>
-
-            <div class="row">
-                <!-- Location: NMEC -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselNMEC" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselNMEC" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselNMEC" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselNMEC" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://mediaim.expedia.com/localexpert/5074832/d3c8c466-1696-4ab3-92fe-677d5a8c864f.jpg?impolicy=resizecrop&rw=1005&rh=565?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="NMEC-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://s359.kapook.com/pagebuilder/fd1649a8-99e3-48e6-8a0d-bc6cab58ba75.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="NMEC-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://s359.kapook.com/pagebuilder/5ab67576-dc1d-4126-97de-fdbc26b22d16.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="NMEC-3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNMEC"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselNMEC"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <img src="images/cheerholidays_logo.jpg" alt="Cheer Holidays Logo"
+                                style="height: 35px; width: auto; margin-right: 10px; border-radius: 6px; vertical-align: middle;">
+                            <h4 class="fw-bold mb-0">Cheer Holidays</h4>
                         </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i
-                                        class="bi bi-building me-2"></i>พิพิธภัณฑ์แห่งชาติอารยธรรมอียิปต์ (NMEC)
-                                </h5>
-                                <span class="card-subtitle">Fustat, Old Cairo</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">ที่เก็บรวบรวมมหาฟาโรห์และราชินีแห่งอียิปต์โบราณแห่งใหม่ล่าสุด
-                                    ไฮไลท์คือ <strong>ห้องโถงมัมมี่หลวง (The Royal Mummies Hall)</strong>
-                                    ที่จัดแสดงมัมมี่ของฟาโรห์ 22 พระองค์ อาทิ ฟาโรห์รามเสสที่ 2, ฟาโรห์เซติที่ 1
-                                    และราชินีฮัตเชปซุต</p>
-                            </div>
-                            <p class="card-text small">พิพิธภัณฑ์แห่งนี้เล่าเรื่องราวอารยธรรมอียิปต์อย่างครบวงจร
-                                ตั้งแต่ยุคก่อนประวัติศาสตร์จนถึงยุคปัจจุบัน ด้วยเทคโนโลยีการจัดแสดงระดับโลก</p>
-                            <div class="food-souvenir">
-                                <span class="tag"><i class="bi bi-camera me-1"></i>Photo Spot</span>
-                                <span class="tag"><i class="bi bi-book me-1"></i>ประวัติศาสตร์</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Location: Khan el-Khalili -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselKhan" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselKhan" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselKhan" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselKhan" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://st.depositphotos.com/2110927/55084/i/600/depositphotos_550848374-stock-photo-khan-khalili-market-old-cairo.jpg"
-                                        class="d-block w-100" alt="Khan el-Khalili Market-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/43/37/da/3707-10151228227672760.jpg?w=900&h=-1&s=1"
-                                        class="d-block w-100" alt="Khan el-Khalili Market-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/6a/a3/5b/sovernirs.jpg?w=1400&h=-1&s=1"
-                                        class="d-block w-100" alt="Khan el-Khalili Market-3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselKhan"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselKhan"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-bag me-2"></i>ตลาดคานเอลคาลลี (Khan el-Khalili)
-                                </h5>
-                                <span class="card-subtitle">Islamic Cairo</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">ตลาดเก่าแก่ที่มีชื่อเสียงที่สุดในกรุงไคโร
-                                    และเป็นตลาดแบบอาหรับที่คึกคักและมีเสน่ห์ที่สุดในตะวันออกกลาง
-                                    บรรยากาศสไตล์อียิปต์โบราณผสมผสานชีวิตคนท้องถิ่น</p>
-                            </div>
-                            <p class="card-text small">แหล่งช้อปปิ้งของฝากสไตล์อียิปต์ เช่น งานหัตถกรรม เครื่องเงิน
-                                น้ำหอม ผ้าทอ และของที่ระลึก สามารถนั่งจิบชาหรือกาแฟที่ร้านน้ำชาเก่าแก่ได้</p>
-                            <div class="food-souvenir">
-                                <span class="tag"><i class="bi bi-cup-hot me-1"></i>ชิชา</span>
-                                <span class="tag"><i class="bi bi-gift me-1"></i>ของฝาก</span>
-                                <span class="tag"><i class="bi bi-lightbulb me-1"></i>โคมไฟ</span>
-                            </div>
-                        </div>
+                        <hr class="border-secondary my-4">
+                        <p class="small text-white-50 mb-0">&copy; 2026 Cheer Holidays. All rights reserved. TAT License
+                            No.
+                            11/07622</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Hotel Information -->
-            <div class="alert mt-4" role="alert"
-                style="background: linear-gradient(135deg, #f3e6c9 0%, #ede0c8 100%); border-left: 4px solid #d4af37; border-radius: 8px; box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);">
-                <h6 style="color: #5a3e2b; margin-bottom: 8px;"><i class="bi bi-building me-2"
-                        style="color: #d4af37;"></i>โรงแรมที่พัก</h6>
-                <p class="mb-0" style="color: #5a3e2b;"><strong>Radisson Blu Hotel, Cairo</strong></p>
-            </div>
-        </div>
-
-        <!-- Day 3: Giza & Nile Cruise -->
-        <div id="day-3" class="day-section animate-on-scroll slide-up">
-            <h2><span class="day-badge">วันที่ 3</span> 29 มี.ค. | มหาพีระมิด & Grand Egyptian Museum</h2>
-            <p class="text-muted mb-4">เยี่ยมชมสิ่งมหัศจรรย์ของโลก มหาพีระมิดกีซา และสฟิงซ์ พร้อมชม Grand Egyptian
-                Museum และดินเนอร์ล่องเรือแม่น้ำไนล์ยามค่ำคืน</p>
-
-            <div class="row">
-                <!-- Location: Pyramids & Sphinx -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselPyramids" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselPyramids" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselPyramids" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselPyramids" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm-970-80.jpg.webp?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="pyramid-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.worldatlas.com/r/w960-q80/upload/82/6b/a4/thinkstockphotos-178379842.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="pyramid-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/pyramid-1.jpg" class="d-block w-100" alt="pyramid-3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPyramids"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPyramids"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-triangle-fill me-2"></i>มหาพีระมิดและสฟิงซ์
-                                </h5>
-                                <span class="card-subtitle">Giza Plateau</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">หนึ่งในเจ็ดสิ่งมหัศจรรย์ของโลกยุคโบราณ สร้างขึ้นเมื่อกว่า 4,500 ปี
-                                    โดยฟาโรห์คูฟู ประกอบด้วยหินกว่า 2.3 ล้านก้อน และรูปสลักสิงโตหัวมนุษย์
-                                    ผู้พิทักษ์นครศักดิ์สิทธิ์</p>
-                            </div>
-                            <p class="card-text small">สัมผัสความยิ่งใหญ่ของอาณาจักรอียิปต์โบราณ
-                                สถานที่ที่ท้าทายจินตนาการของมนุษยชาติมาหลายยุคหลายสมัย</p>
-                            <div class="food-souvenir">
-                                <span class="tag"><i class="bi bi-camera me-1"></i>Photo Spot</span>
-                                <span class="tag"><i class="bi bi-book me-1"></i>ประวัติศาสตร์</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Location: Grand Egyptian Museum (GEM) -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselGEM" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselGEM" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselGEM" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselGEM" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://www.pelago.com/img/products/EG-Egypt/3-hour-tour-to-the-grand-egyptian-museum-gem/ccc0deb5-d097-457d-8e17-c204297d20a3_3-hour-tour-to-the-grand-egyptian-museum-gem-large.webp?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="GEM-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://egyptra.pro/uploads/photo_library/photo_6824b3495d851.webp?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="GEM-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://static.wixstatic.com/media/5eff48_03b3e7b54fc84360b67a38cbfa4bc333~mv2.jpg/v1/fill/w_900,h_675,al_c,q_85,enc_avif,quality_auto/5eff48_03b3e7b54fc84360b67a38cbfa4bc333~mv2.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="GEM-3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselGEM"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselGEM"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-bank2 me-2"></i>Grand Egyptian Museum (GEM)</h5>
-                                <span class="card-subtitle">Near Giza Plateau</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">พิพิธภัณฑ์ที่ทันสมัยและยิ่งใหญ่ที่สุดในโลก
-                                    พร้อม<strong>ห้องสมบัติฟาโรห์ตุตันคาเมน</strong> ที่จัดแสดงครบครั้งแรก ชมสมบัติทองคำ
-                                    โลงพระศพ
-                                    และเครื่องใช้ล้ำค่านับพันชิ้น</p>
-                            </div>
-                            <p class="card-text small">แลนด์มาร์กแห่งศตวรรษที่ 21
-                                ที่เชื่อมมรดกโบราณเข้ากับเทคโนโลยีสมัยใหม่ ตั้งอยู่ไม่ไกลจากมหาพีระมิด</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Location: Nile Cruise -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselNile" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselNile" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselNile" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselNile" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://ak-d.tripcdn.com/images//0581112000n3oot2m097D_C_1080_607.jpg_.webp?_fr=wc"
-                                        class="d-block w-100" alt="Nile Cruise-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/nilecrystal1-2.png" class="d-block w-100" alt="Nile Cruise-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/nilecrystal1-3.jpg" class="d-block w-100" alt="Nile Cruise-3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNile"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselNile"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-water me-2"></i>ล่องแม่น้ำไนล์ รับประทานอาหารค่ำ
-                                </h5>
-                                <span class="card-subtitle">River Nile</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">ประสบการณ์สุดพิเศษบนสายน้ำอมตะ พร้อมชมการแสดงระบำหน้าท้อง (Belly
-                                    Dance) และรำพื้นเมือง (Tanoura)</p>
-                            </div>
-                            <p class="card-text small">อิ่มอร่อยกับบุฟเฟต์อาหารนานาชาติและอาหารพื้นเมือง
-                                ชมวิวแสงไฟริมฝั่งแม่น้ำไนล์ยามค่ำคืน</p>
-                            <div class="food-souvenir">
-                                <span class="tag"><i class="bi bi-music-note-beamed me-1"></i>Show</span>
-                                <span class="tag"><i class="bi bi-cup-straw me-1"></i>Dinner</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hotel Information -->
-            <div class="alert mt-4" role="alert"
-                style="background: linear-gradient(135deg, #f3e6c9 0%, #ede0c8 100%); border-left: 4px solid #d4af37; border-radius: 8px; box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);">
-                <h6 style="color: #5a3e2b; margin-bottom: 8px;"><i class="bi bi-building me-2"
-                        style="color: #d4af37;"></i>โรงแรมที่พัก</h6>
-                <p class="mb-0" style="color: #5a3e2b;"><strong>Radisson Blu Hotel, Cairo</strong></p>
-            </div>
-        </div>
-
-
-        <!-- Day 4: Citadel, Memphis & Saqqara (Content from old Day 3) -->
-        <div id="day-4" class="day-section animate-on-scroll slide-up">
-            <h2><span class="day-badge">วันที่ 4</span> 30 มี.ค. | ป้อมปราการไคโร, เมมฟิส & ซัคคารา</h2>
-            <p class="text-muted mb-4">สำรวจมัสยิดโมฮัมหมัดอาลี โบสถ์แขวน ย่านคอปติกไคโร
-                และเดินทางสู่เมืองหลวงเก่าเมมฟิส กับพีระมิดขั้นบันไดแห่งแรกของโลก</p>
-
-            <div class="row">
-                <!-- Location: Mosque of Muhammad Ali -->
-                <div class="col-12 col-md-6 col-lg-6 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselMosque" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselMosque" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselMosque" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselMosque" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://egymonuments.gov.eg/media/1126/dsc_0143-2.jpg?anchor=center&mode=crop&width=645&height=423&rnd=133300936160000000"
-                                        class="d-block w-100" alt="Mosque of Muhammad Ali-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://mlrhpz8jmuut.i.optimole.com/cb:w8qn.502d1/w:710/h:473/q:mauto/dpr:1.5/f:best/ig:avif/id:bd96cb77814f1fa343880a78f7a67497/https://www.egypttoursplus.com/Mosque-Of-Mohamed-Ali-%E2%80%93-The-Alabaster-Mosque.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="Mosque of Muhammad Ali-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://ucarecdn.com/4a823330-33e6-4fe8-9104-c578da9695dd/-/crop/640x360/20,0/-/preview/?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="Mosque of Muhammad Ali-3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMosque"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselMosque"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-moon-stars-fill me-2"></i>มัสยิดโมฮัมหมัดอาลี
-                                </h5>
-                                <span class="card-subtitle">The Citadel, Cairo</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">ตั้งอยู่ภายในป้อมปราการไคโร
-                                    มีลักษณะเด่นคือผนังทั้งภายในและภายนอกกรุดด้วยหินอลาบาสเตอร์ขาวนวล จึงได้ชื่อว่า
-                                    <strong>"มัสยิดอลาบาสเตอร์"</strong>
-                                </p>
-                            </div>
-                            <p class="card-text small">สถาปัตยกรรมแบบออตโตมัน พร้อมโดมใหญ่และหออะซานคู่ ที่สวยงาม
-                                จากบริเวณลานด้านนอก สามารถชมทิวทัศน์อันงดงาม ของกรุงไคโรแบบพาโนรามาได้</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Location: Hanging Church & Coptic Museum -->
-                <div class="col-12 col-md-6 col-lg-6 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselCoptic" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselCoptic" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselCoptic" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselCoptic" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://www.egypttoursportal.com/images/2025/05/Hanging-Church-In-Coptic-Cairo-Egypt-Tours-Portal.jpg"
-                                        class="d-block w-100" alt="Hanging Church-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://ucarecdn.com/38b8dcbf-7a48-4c69-93fc-97bd15346097/-/crop/640x360/20,0/-/preview/?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="Hanging Church-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://mediaim.expedia.com/destination/9/e30f118e0af905961ebfeee2d6d6840d.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="Coptic Museum-1">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCoptic"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCoptic"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-bookmark-star-fill me-2"></i>โบสถ์แขวน &
-                                    พิพิธภัณฑ์คอปติก
-                                </h5>
-                                <span class="card-subtitle">Coptic Cairo</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">โบสถ์แขวนตั้งอยู่เหนือประตูป้อมบาบิโลนโบราณ จนดูเหมือน 'แขวน'
-                                    กลางอากาศ
-                                    ภายในตกแต่งด้วยศิลปะคอปติกชั้นสูง และรวบรวมภาพไอคอนเก่าแก่ล้ำค่ากว่า 110 ภาพ</p>
-                            </div>
-                            <p class="card-text small">ศูนย์รวมจิตใจและเป็นมรดกแห่งศรัทธาของชาวคริสต์คอปติก
-                                ที่ยังคงสืบทอดมาจนถึงปัจจุบัน</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Location: Saint Sergius and Bacchus Church -->
-                <div class="col-12 col-md-6 col-lg-12 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselSaintSergius" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselSaintSergius" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselSaintSergius"
-                                    data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselSaintSergius"
-                                    data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/Church_of_Sts._Sergius_and_Bacchus_1.jpg" class="d-block w-100"
-                                        alt="Saint Sergius Church-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://egyptplanners.com/wp-content/uploads/2020/07/church-of-abu-serga.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="Saint Sergius Church-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://i0.wp.com/egypttimetravel.com/wp-content/uploads/2020/07/Church-of-St-Sergius.jpg?w=800&ssl=1?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="Saint Sergius Church-3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSaintSergius"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselSaintSergius"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i
-                                        class="bi bi-star-fill me-2"></i>โบสถ์เซนต์เซอร์จิอุสและเซนต์บาคคัส
-                                </h5>
-                                <span class="card-subtitle">Coptic Cairo</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">โบสถ์คริสต์เก่าแก่ที่สุดแห่งหนึ่งของอียิปต์ (ศตวรรษที่ 4-5)
-                                    มี<strong>ถ้ำศักดิ์สิทธิ์ (Crypt)</strong> ใต้พื้นโบสถ์ที่เชื่อว่าเคยเป็นที่พำนักของ
-                                    <strong>ครอบครัวศักดิ์สิทธิ์</strong> (พระนางมารีย์ นักบุญโยเซฟ และพระเยซูทารก)
-                                    ระหว่างการลี้ภัยในอียิปต์
-                                </p>
-                            </div>
-                            <p class="card-text small">สถาปัตยกรรมแบบบาซิลิกา ตกแต่งด้วยฉากไม้แกะสลัก ไอคอน
-                                และแท่นบูชาหินอ่อน สะท้อนศิลปะคอปติกอันเป็นเอกลักษณ์
-                                เปิดให้ลงไปสัมผัสความศักดิ์สิทธิ์ในถ้าใต้ดินได้</p>
-                            <div class="food-souvenir">
-                                <span class="tag"><i class="bi bi-heart-fill me-1"></i>ศักดิ์สิทธิ์</span>
-                                <span class="tag"><i class="bi bi-book me-1"></i>ประวัติศาสตร์</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Location: Memphis & Saqqara -->
-                <div class="col-12 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselMemphis" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselMemphis" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselMemphis" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselMemphis" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/memphis_1.jpg" class="d-block w-100" alt="Ancient Memphis">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/14/61/8c/memphis-museum.jpg?w=2000&h=-1&s=1"
-                                        class="d-block w-100" alt="Step Pyramid">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/memphis_3.jpg" class="d-block w-100" alt="Saqqara Ruins">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMemphis"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselMemphis"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-columns-gap me-2"></i>เมืองเมมฟิส & ซัคคารา</h5>
-                                <span class="card-subtitle">Historic Capital</span>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="highlight-box mb-2">
-                                        <h6><i class="bi bi-stars me-1"></i>เมมฟิส (Memphis)</h6>
-                                        <p class="small mb-0">เมืองหลวงแรกของอียิปต์โบราณ
-                                            ไฮไลท์คือ <strong>รูปสลักฟาโรห์รามเสสที่ 2</strong>
-                                            ขนาดมหึมาที่นอนบรรทมอย่างสง่า
-                                            และสฟิงซ์อลาบาสเตอร์ขนาดใหญ่อันดับสองของอียิปต์</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="highlight-box mb-2">
-                                        <h6><i class="bi bi-stars me-1"></i>ซัคคารา (Saqqara)</h6>
-                                        <p class="small mb-0">ไฮไลท์คือ <strong>พีระมิดขั้นบันไดแห่งแรกของโลก (Step
-                                                Pyramid)</strong>
-                                            สร้างโดยฟาโรห์โจเซอร์ เป็นจุดเริ่มต้นของสถาปัตยกรรมพีระมิด</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="card-text small">
-                                การมาเยี่ยมชมสองแห่งนี้คือการเดินทางย้อนเวลากลับไปสู่จุดกำเนิดของอารยธรรมอียิปต์</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hotel Information -->
-            <div class="alert mt-4" role="alert"
-                style="background: linear-gradient(135deg, #f3e6c9 0%, #ede0c8 100%); border-left: 4px solid #d4af37; border-radius: 8px; box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);">
-                <h6 style="color: #5a3e2b; margin-bottom: 8px;"><i class="bi bi-building me-2"
-                        style="color: #d4af37;"></i>โรงแรมที่พัก</h6>
-                <p class="mb-0" style="color: #5a3e2b;"><strong>Radisson Blu Hotel, Cairo</strong></p>
-            </div>
-        </div>
-
-        <!-- Day 5: Alexandria -->
-        <div id="day-5" class="day-section animate-on-scroll slide-up">
-            <h2><span class="day-badge">วันที่ 5</span> 31 มี.ค. | เมืองอเล็กซานเดรียแห่งทะเลเมดิเตอร์เรเนียน</h2>
-            <p class="text-muted mb-4">เดินทางสู่เมืองท่าเก่าแก่ ชมหอสมุดอเล็กซานเดรีย ป้อมปราการไคต์เบย์
-                และสุสานใต้ดินโคมเอลโชคาฟา</p>
-
-            <div class="row">
-                <!-- Location: Citadel of Qaitbay -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselCitadel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselCitadel" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselCitadel" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselCitadel" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://www.youregypttours.com/storage/1082/1678607223.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="ป้อมปราการไคต์เบย์-1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://res.cloudinary.com/ddjuftfy2/image/upload/f_webp,c_fill,q_auto,w_1300/memphis/xlarge/273993311_many-boats-in-front-of-Qaitbay-citadel.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="ป้อมปราการไคต์เบย์-2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://mushroomtravelpage.b-cdn.net/wp-content/uploads/2022/05/Bibliotheca-Alexandrina-shutterstock_355504571.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="หอสมุดอเล็กซานเดรีย">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCitadel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCitadel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-shield-lock me-2"></i>ป้อมปราการไคต์เบย์ & หอสมุด
-                                </h5>
-                                <span class="card-subtitle">Alexandria Coast</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">ป้อมปราการสมัยศตวรรษที่ 15
-                                    สร้างบนฐานของ <strong>ประภาคารฟาโรสแห่งอเล็กซานเดรีย</strong>
-                                    ใกล้กับหอสมุดอเล็กซานเดรียสมัยใหม่ที่สวยงามรูปทรงวงกลม</p>
-                            </div>
-                            <p class="card-text small">ชมวิวทิวทัศน์ทะเลเมดิเตอร์เรเนียนจากมุมสูงของป้อมปราการ
-                                และแวะถ่ายรูปกับหอสมุดที่เป็นสัญลักษณ์ของการฟื้นฟูความรู้</p>
-                            <div class="food-souvenir">
-                                <span class="tag"><i class="bi bi-fish me-1"></i>อาหารทะเล</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Location: Catacombs & Pompey's Pillar -->
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div id="carouselCatacombs" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselCatacombs" data-bs-slide-to="0"
-                                    class="active"></button>
-                                <button type="button" data-bs-target="#carouselCatacombs" data-bs-slide-to="1"></button>
-                                <button type="button" data-bs-target="#carouselCatacombs" data-bs-slide-to="2"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/catacombs_1.jpg" class="d-block w-100" alt="Ancient Catacombs">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/catacombs_2.jpg" class="d-block w-100" alt="Roman Ruins">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://www.historyhit.com/app/uploads/2020/11/shutterstock_pompeys-pillar-1.jpg?w=800&auto=format&fit=crop"
-                                        class="d-block w-100" alt="Alexandria Artifacts">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCatacombs"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCatacombs"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-header-custom rounded-top">
-                                <h5 class="card-title"><i class="bi bi-box-seam me-2"></i>สุสานใต้ดิน & เสาปอมเปย์</h5>
-                                <span class="card-subtitle">Kom El Shoqafa</span>
-                            </div>
-                            <div class="highlight-box">
-                                <h6><i class="bi bi-stars me-1"></i>จุดเด่น</h6>
-                                <p class="small mb-0">สุสานใต้ดินขนาดใหญ่ 3 ชั้น ผสมผสานศิลปะอียิปต์ โรมัน
-                                    และกรีก,
-                                    เสาปอมเปย์คือเสาหินแกรนิตแดงขนาดยักษ์สูง 27 เมตร</p>
-                            </div>
-                            <p class="card-text small">
-                                ลงไปสำรวจโลกใต้พิภพที่เต็มไปด้วยงานแกะสลักศิลปะประกอบศาสนาและความเชื่อโบราณ</p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Day 6: Return to Bangkok -->
-        <div id="day-6" class="day-section animate-on-scroll slide-up">
-            <h2><span class="day-badge">วันที่ 6</span> 1 เม.ย. | เดินทางกลับกรุงเทพฯ</h2>
-            <p class="text-muted mb-4">เดินทางจากสนามบินเจดดาห์กลับสู่กรุงเทพฯ</p>
-
-            <div class="highlight-box">
-                <h6><i class="bi bi-airplane-fill me-1"></i>ข้อมูลเที่ยวบิน</h6>
-                <p class="small mb-2"><strong>ออกเดินทาง:</strong> สนามบินเจดดาห์ เวลา 01:30 น. ด้วยเที่ยวบิน
-                    <strong>SV844</strong>
-                </p>
-                <p class="small mb-0"><strong>เดินทางถึง:</strong> สนามบินสุวรรณภูมิ เวลา 13:45 น.</p>
-            </div>
-
-            <div class="text-center mt-4">
-                <p class="lead" style="color: var(--brown);">🎉 สิ้นสุดการเดินทางที่น่าประทับใจ 🎉</p>
-                <p class="text-muted">ขอบคุณที่ร่วมเดินทางกับ Cheer Holidays</p>
-            </div>
-        </div>
-
-        <!-- Preparation Checklist -->
-        <section id="preparation" class="day-section animate-on-scroll slide-up">
-            <h2><i class="bi bi-clipboard-check me-2"></i>การเตรียมตัวก่อนเดินทาง</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h5 class="mb-3" style="color: var(--brown);"><i
-                            class="bi bi-file-earmark-text me-2"></i>เอกสารและวีซ่า
-                    </h5>
-                    <div class="checklist-item">
-                        <i class="bi bi-check-circle-fill checklist-icon"></i>
-                        <div>
-                            <strong>วีซ่าอียิปต์ (E-visa)</strong>
-                            <p class="small text-muted mb-0">ใช้เวลาประมาณ 25-30 วันในการพิจารณา
-                                ต้องมีหนังสือเดินทางอายุเหลือมากกว่า 6 เดือน</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item">
-                        <i class="bi bi-check-circle-fill checklist-icon"></i>
-                        <div>
-                            <strong>หนังสือเดินทาง (Passport)</strong>
-                            <p class="small text-muted mb-0">สำเนาหน้าแรกและหน้าที่มีวีซ่า</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="mb-3" style="color: var(--brown);"><i
-                            class="bi bi-cash-coin me-2"></i>สิ่งที่ควรเตรียมและรู้จัก</h5>
-                    <div class="checklist-item">
-                        <i class="bi bi-info-circle-fill checklist-icon"></i>
-                        <div>
-                            <strong>การแต่งกาย</strong>
-                            <p class="small text-muted mb-0">เนื่องจากเข้าชมโบสถ์และมัสยิด
-                                ผู้หญิงควรมีผ้าคลุมไหล่/ผ้าโพกศีรษะ ผู้ชายควมสวมกางเกงขายาว</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item">
-                        <i class="bi bi-info-circle-fill checklist-icon"></i>
-                        <div>
-                            <strong>ทิป (Tip)</strong>
-                            <p class="small text-muted mb-0">ค่าทิปพนักงานขับรถ, ไกด์ และพนักงานบริการโดยเฉลี่ย 2,500
-                                บาท/ทริป/ท่าน</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item">
-                        <i class="bi bi-sun-fill checklist-icon"></i>
-                        <div>
-                            <strong>สภาพอากาศ</strong>
-                            <p class="small text-muted mb-0">เดือนมีนาคมอากาศค่อนข้างร้อน ควรเตรียมครีมกันแดด แว่นกันแดด
-                                และเสื้อผ้ายืดหยุ่น</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="d-flex align-items-center justify-content-center mb-3">
-                        <img src="images/cheerholidays_logo.jpg" alt="Cheer Holidays Logo"
-                            style="height: 35px; width: auto; margin-right: 10px; border-radius: 6px; vertical-align: middle;">
-                        <h4 class="fw-bold mb-0">Cheer Holidays</h4>
-                    </div>
-                    <hr class="border-secondary my-4">
-                    <p class="small text-white-50 mb-0">&copy; 2026 Cheer Holidays. All rights reserved. TAT License No.
-                        11/07622</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top-btn" title="กลับไปด้านบน">
+    <button id="back-to-top-btn" title="กลับไปด้านบน" aria-label="Back to top">
         <i class="bi bi-arrow-up"></i>
     </button>
+
+    <!-- Lazy Loading Script for Performance -->
+    <script>
+        // Add loading="lazy" to all carousel images for better performance
+        document.addEventListener("DOMContentLoaded", function () {
+            const carouselImages = document.querySelectorAll('.carousel-item img');
+            carouselImages.forEach((img, index) => {
+                // Don't lazy load the first few images (above the fold)
+                if (index > 3) {
+                    img.setAttribute('loading', 'lazy');
+                }
+            });
+        });
+    </script>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
