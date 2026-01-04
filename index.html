@@ -22,7 +22,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="อียิปต์มนต์ขลัง ดินแดนไอยคุปต์ 2026">
     <meta property="og:description" content="เที่ยวคุ้มไม่ย้อนเส้นทาง 6 วัน 3 คืน กับเส้นทางอารยธรรมโบราณและมหาพีระมิด">
-    <meta property="og:image" content="icons/og-image.png">
+    <meta property="og:image" content="https://boytheerapol.github.io/Egypt-2026/icons/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
@@ -34,7 +34,7 @@
     <meta name="twitter:title" content="อียิปต์มนต์ขลัง ดินแดนไอยคุปต์ 2026">
     <meta name="twitter:description"
         content="เที่ยวคุ้มไม่ย้อนเส้นทาง 6 วัน 3 คืน กับเส้นทางอารยธรรมโบราณและมหาพีระมิด">
-    <meta name="twitter:image" content="icons/og-image.png">
+    <meta name="twitter:image" content="https://boytheerapol.github.io/Egypt-2026/icons/og-image.png">
 
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#d4af37">
@@ -390,6 +390,78 @@
         }
 
         /* --- Animation Classes --- */
+        /* Base animation class */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: none !important;
+        }
+
+        /* Fade In */
+        .fade-in {
+            opacity: 0;
+        }
+
+        /* Slide Up */
+        .slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        /* Slide Left (from right) */
+        .slide-left {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        /* Slide Right (from left) */
+        .slide-right {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        /* Zoom In */
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        /* Stagger animation for cards */
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .stagger-item:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-item:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-item:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-item:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-item:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .stagger-item:nth-child(6) {
+            transition-delay: 0.6s;
+        }
+
+        /* Legacy support for existing fade-in-section */
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
@@ -481,7 +553,7 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="container fade-in-section">
+        <div class="container animate-on-scroll zoom-in">
             <h5 class="text-warning fw-bold mb-2"><i class="bi bi-star-fill"></i> 27 มี.ค. - 1 เม.ย. 2569 <i
                     class="bi bi-star-fill"></i></h5>
             <h1>อียิปต์มนต์ขลัง <br class="d-sm-none">ดินแดนไอยคุปต์</h1>
@@ -498,7 +570,7 @@
 
     <div class="container pb-5">
         <!-- Overview / Map Button -->
-        <section class="text-center mb-5 fade-in-section">
+        <section class="text-center mb-5 animate-on-scroll slide-up">
             <h2 class="mb-4"><i class="bi bi-map me-2"></i>แผนที่เส้นทางการเดินทาง</h2>
             <p class="text-muted mb-4">ดูภาพรวมเส้นทางจากไคโร สู่ อเล็กซานเดรีย และแหล่งประวัติศาสตร์ต่างๆ</p>
             <a href="https://www.google.com/maps/dir/Old+Cairo,+Egypt/The+National+Museum+of+Egyptian+Civilization/Khan+el-Khalili/The+Great+Pyramid+of+Giza/Mosque+of+Muhammad+Ali/The+Hanging+Church/Sphinx+of+Memphis/Saqqara+Pyramid,+Badrshein,+Egypt/Alexandria,+Egypt/@29.9022361,31.1158585,11.37z/data=!4m56!4m55!1m5!1m1!1s0x145847056232e6f7:0xf042358353de4586!2m2!1d31.2340199!2d30.0077797!1m5!1m1!1s0x1458476863e39e8f:0xc2e058446f8f145d!2m2!1d31.2482393!2d30.0085929!1m5!1m1!1s0x145840eb2c0e580f:0x1761e0e461027d11!2m2!1d31.2622538!2d30.0477386!1m5!1m1!1s0x14584587ac8f291b:0x810c2f3fa2a52424!2m2!1d31.1342628!2d29.9791808!1m5!1m1!1s0x145840aa80f7569f:0xd0d4def35935c86e!2m2!1d31.2597966!2d30.0290456!1m5!1m1!1s0x145847104387574f:0x5ba0bd7ab3d09ac5!2m2!1d31.2301822!2d30.0052661!1m5!1m1!1s0x14584b2a1e338f41:0xec97aa32a7eda655!2m2!1d31.2549347!2d29.8495712!1m5!1m1!1s0x14584bd4cd4a2873:0xe08c36415baeee76!2m2!1d31.2168246!2d29.8684624!1m5!1m1!1s0x14f5c49126710fd3:0xb4e0cda629ee6bb9!2m2!1d29.9187387!2d31.2000924!3e9?hl=en&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
@@ -508,7 +580,7 @@
         </section>
 
         <!-- Day 1: Arrival & Old Cairo -->
-        <div id="day-1" class="day-section fade-in-section">
+        <div id="day-1" class="day-section animate-on-scroll slide-up">
             <h2><span class="day-badge">วันที่ 1</span> 27 มี.ค. | สนามบินสุวรรณภูมิ</h2>
 
             <div class="card-body">
@@ -574,7 +646,7 @@
         </div>
 
         <!-- Day 2: Giza & Nile Cruise -->
-        <div id="day-2" class="day-section fade-in-section">
+        <div id="day-2" class="day-section animate-on-scroll slide-up">
             <h2><span class="day-badge">วันที่ 2</span> 28 มี.ค. | ถึงไคโร & เมืองเก่า (Old Cairo)</h2>
             <p class="text-muted mb-4">เดินทางถึงไคโร เยี่ยมชมพิพิธภัณฑ์แห่งชาติอารยธรรมอียิปต์ (NMEC)
                 และช้อปปิ้งตลาดคานเอลคาลลี</p>
@@ -704,7 +776,7 @@
         </div>
 
         <!-- Day 3: Giza & Nile Cruise -->
-        <div id="day-3" class="day-section fade-in-section">
+        <div id="day-3" class="day-section animate-on-scroll slide-up">
             <h2><span class="day-badge">วันที่ 3</span> 29 มี.ค. | มหาพีระมิด & Grand Egyptian Museum</h2>
             <p class="text-muted mb-4">เยี่ยมชมสิ่งมหัศจรรย์ของโลก มหาพีระมิดกีซา และสฟิงซ์ พร้อมชม Grand Egyptian
                 Museum และดินเนอร์ล่องเรือแม่น้ำไนล์ยามค่ำคืน</p>
@@ -880,7 +952,7 @@
 
 
         <!-- Day 4: Citadel, Memphis & Saqqara (Content from old Day 3) -->
-        <div id="day-4" class="day-section fade-in-section">
+        <div id="day-4" class="day-section animate-on-scroll slide-up">
             <h2><span class="day-badge">วันที่ 4</span> 30 มี.ค. | ป้อมปราการไคโร, เมมฟิส & ซัคคารา</h2>
             <p class="text-muted mb-4">สำรวจมัสยิดโมฮัมหมัดอาลี โบสถ์แขวน ย่านคอปติกไคโร
                 และเดินทางสู่เมืองหลวงเก่าเมมฟิส กับพีระมิดขั้นบันไดแห่งแรกของโลก</p>
@@ -1123,7 +1195,7 @@
         </div>
 
         <!-- Day 5: Alexandria -->
-        <div id="day-5" class="day-section fade-in-section">
+        <div id="day-5" class="day-section animate-on-scroll slide-up">
             <h2><span class="day-badge">วันที่ 5</span> 31 มี.ค. | เมืองอเล็กซานเดรียแห่งทะเลเมดิเตอร์เรเนียน</h2>
             <p class="text-muted mb-4">เดินทางสู่เมืองท่าเก่าแก่ ชมหอสมุดอเล็กซานเดรีย ป้อมปราการไคต์เบย์
                 และสุสานใต้ดินโคมเอลโชคาฟา</p>
@@ -1235,7 +1307,7 @@
         </div>
 
         <!-- Day 6: Return to Bangkok -->
-        <div id="day-6" class="day-section fade-in-section">
+        <div id="day-6" class="day-section animate-on-scroll slide-up">
             <h2><span class="day-badge">วันที่ 6</span> 1 เม.ย. | เดินทางกลับกรุงเทพฯ</h2>
             <p class="text-muted mb-4">เดินทางจากสนามบินเจดดาห์กลับสู่กรุงเทพฯ</p>
 
@@ -1254,7 +1326,7 @@
         </div>
 
         <!-- Preparation Checklist -->
-        <section id="preparation" class="day-section fade-in-section">
+        <section id="preparation" class="day-section animate-on-scroll slide-up">
             <h2><i class="bi bi-clipboard-check me-2"></i>การเตรียมตัวก่อนเดินทาง</h2>
             <div class="row">
                 <div class="col-md-6">
@@ -1373,7 +1445,7 @@
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.1
+                threshold: 0.15 // Slightly higher threshold for smoother animations
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
@@ -1385,8 +1457,12 @@
                 });
             }, observerOptions);
 
+            // Observe all animated elements
             const fadeElements = document.querySelectorAll('.fade-in-section');
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
             fadeElements.forEach(el => observer.observe(el));
+            animatedElements.forEach(el => observer.observe(el));
 
             // --- Content Protection ---
             // Prevent right-click
